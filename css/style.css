@@ -1,175 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/*Estilos Gerais*/
-:root{
-    --laranja: #FF5C1F;
-    --azul-escuro: #101E24;
-    --cinza:#313131;
-    --degrade-btn: linear-gradient(#FF5C1F, #ED4725);
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-
-body{
-    font-family: "Fira Sans Condensed", sans-serif; 
-}
-
-/*Barra Menu*/
-.barra-cinza{
-    background: var(--cinza);
-}
-
-.container-barra{
-    max-width: 1440px;
-    padding: 0;
-    margin: 0 auto;
-}
-
-.btn-gradiente{
-    padding: 10px 25px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    background-image: var(--degrade-btn);
-    border-radius: 20px;
-    font-family: "Fira Sans Condensed", sans-serif; ;
-    font-size: 18px;
-    font-weight:400
-}
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.logo a{
-    margin-left: 30%;
-    font-size: 30px;
-    font-weight: 800;
-    color: white;
-}
-
-.ul{
-    display: flex;
-    align-items: center;
-}
-
-.ul li{
-    margin: 0 35px;
-    font-size: 18px;
-    font-weight:400;
-}
-
-.ul li a{
-    color: white;
-}
-
-/*Background Home*/
-
-.background{
-    background: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 1;
-}
-
-.container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.main-text {
-    position: relative;
-    width: 40%;
-    color: #101E24;
-    font-size: 40px;    
-    margin-left: 10%;  
-}
-
-.main-text div {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.main-img {
-    height: 60%;
-    width: 60%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.main-img img {
-    height: 100%;
-    width: auto;
-}
-
-.menu-icon {
-    display: none;
-}
-
-/*Responsivo*/
-
-@media (max-width: 1024px){
-    .menu-icon{
-        display: block;
-        margin-right: 5%;
-        position: relative;
-        z-index: 4;
+    /*Estilos Gerais*/
+    :root{
+        --laranja: #FF5C1F;
+        --azul-escuro: #101E24;
+        --cinza:#313131;
+        --degrade-btn: linear-gradient(#FF5C1F, #ED4725);
     }
-    .ul{
-        position: fixed;
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    body{
+        font-family: "Fira Sans Condensed", sans-serif; 
+    }
+
+    /*Barra Menu*/
+    .barra-cinza{
         background: var(--cinza);
-        top: 0;
-        width: 100%;
-        height: 100%;
-        left: 100%;
-        z-index: 3;
-        transition: 0.3s;
-        flex-direction: column;
-        justify-content: center;
     }
+
+    .container-barra{
+        max-width: 1440px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .btn-gradiente{
+        padding: 10px 25px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        background-image: var(--degrade-btn);
+        border-radius: 20px;
+        font-family: "Fira Sans Condensed", sans-serif; ;
+        font-size: 18px;
+        font-weight:400
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .logo a{
+        margin-left: 30%;
+        font-size: 30px;
+        font-weight: 800;
+        color: white;
+    }
+
+    .ul{
+        display: flex;
+        align-items: center;
+    }
+
     .ul li{
-        font-size: 20px;
-        margin: 20px;
+        margin: 0 35px;
+        font-size: 18px;
         font-weight:400;
     }
-    .ul.ativo{
-        left: 0;
-    }
-    main .container{
-        flex-direction: column;
+
+    .ul li a{
+        color: white;
     }
 
-    .main-img{
-        width: 100%;
-    }
-    
-    .main-text{
+    /*Background Home*/
+
+    .background{
+        background: #FFFFFF;
         display: flex;
-        word-wrap: break-word;
-        width: 80%;
-        flex-direction: column;
-        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1;
     }
 
-    .main-text div{
+    .container{
         width: 100%;
-        justify-content: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
     }
-}
+
+    .main-text {
+        position: relative;
+        width: 40%;
+        color: #101E24;
+        font-size: 40px;    
+        margin-left: 10%;  
+    }
+
+    .main-text div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .main-img {
+        height: 60%;
+        width: 60%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .main-img img {
+        height: 100%;
+        width: auto;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    /*Responsivo*/
+
+    @media (max-width: 1024px){
+        .menu-icon{
+            display: block;
+            margin-right: 5%;
+            position: relative;
+            z-index: 4;
+        }
+        .ul{
+            position: fixed;
+            background: var(--cinza);
+            top: 0;
+            width: 100%;
+            height: 100%;
+            left: 100%;
+            z-index: 3;
+            transition: 0.3s;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .ul li{
+            font-size: 20px;
+            margin: 20px;
+            font-weight:400;
+        }
+        .ul.ativo{
+            left: 0;
+        }
+        main .container{
+            flex-direction: column;
+        }
+
+        .main-img{
+            width: 100%;
+        }
+        
+        .main-text{
+            display: flex;
+            word-wrap: break-word;
+            width: 80%;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .main-text div{
+            width: 100%;
+            justify-content: center;
+        }
+    }
