@@ -18,7 +18,6 @@
 
 body{
     font-family: "Fira Sans Condensed", sans-serif; 
-    overflow: hidden;
 }
 
 /*Barra Menu*/
@@ -26,7 +25,7 @@ body{
     background: var(--cinza);
 }
 
-.container{
+.container-barra{
     max-width: 1440px;
     padding: 0;
     margin: 0 auto;
@@ -39,8 +38,9 @@ body{
     cursor: pointer;
     background-image: var(--degrade-btn);
     border-radius: 20px;
-    font-size: 15px;
-    font-weight:500
+    font-family: "Fira Sans Condensed", sans-serif; ;
+    font-size: 18px;
+    font-weight:400
 }
 
 nav{
@@ -64,7 +64,7 @@ nav{
 
 .ul li{
     margin: 0 35px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight:400;
 }
 
@@ -79,10 +79,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-main .container{
+.container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -122,32 +123,53 @@ main .container{
     display: none;
 }
 
-@media (max-width: 1024px) {
-    .main-text {
-        font-size: 35px;
-        width: 50%;
-    }
-    .main-img {
-        width: 50%;
-    }
-}
+/*Responsivo*/
 
-@media (max-width: 768px) {
-    .main-text {
-        font-size: 30px;
-        width: 60%;
+@media (max-width: 1024px){
+    .menu-icon{
+        display: block;
+        margin-right: 5%;
+        position: relative;
+        z-index: 4;
     }
-    .main-img {
-        width: 40%;
+    .ul{
+        position: fixed;
+        background: var(--cinza);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        z-index: 3;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
     }
-}
+    .ul li{
+        font-size: 20px;
+        margin: 20px;
+        font-weight:400;
+    }
+    .ul.ativo{
+        left: 0;
+    }
+    main .container{
+        flex-direction: column;
+    }
 
-@media (max-width: 480px) {
-    .main-text {
-        font-size: 25px;
-        width: 70%;
+    .main-img{
+        width: 100%;
     }
-    .main-img {
-        width: 30%;
+    
+    .main-text{
+        display: flex;
+        word-wrap: break-word;
+        width: 80%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-text div{
+        width: 100%;
+        justify-content: center;
     }
 }
