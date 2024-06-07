@@ -1,175 +1,283 @@
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    /*Estilos Gerais*/
-    :root{
-        --laranja: #FF5C1F;
-        --azul-escuro: #101E24;
-        --cinza:#313131;
-        --degrade-btn: linear-gradient(#FF5C1F, #ED4725);
-    }
+/*Estilos Gerais*/
+:root{
+    --laranja: #FF5413;
+    --azul-escuro: #101E24;
+    --cinza:#313131;
+    --degrade-btn: linear-gradient(#FF5C1F, #ED4725);
+}
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        list-style: none;
-    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 
-    body{
-        font-family: "Fira Sans Condensed", sans-serif; 
-    }
+body{
+    font-family: "Fira Sans Condensed", sans-serif; 
+}
 
-    /*Barra Menu*/
-    .barra-cinza{
-        background: var(--cinza);
-    }
+.barra-cinza{
+    background: var(--cinza);
+}
 
-    .container-barra{
-        max-width: 1440px;
-        padding: 0;
-        margin: 0 auto;
-    }
+/* classes reutilizavéis */
+.container{
+    max-width: 1750px;
+    padding: 0;
+    padding-left: 5%;
+    margin: 0;
+    margin-left: auto;
+}
+section,
+footer{
+    padding: 2.7rem 0;
+}
 
-    .btn-gradiente{
-        padding: 10px 25px;
-        color: white;
-        border: none;
-        cursor: pointer;
-        background-image: var(--degrade-btn);
-        border-radius: 20px;
-        font-family: "Fira Sans Condensed", sans-serif; ;
-        font-size: 18px;
-        font-weight:400
-    }
+.btn-gradiente{
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+    border-radius: 20px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 18px;
+    font-weight:400;
+}
 
-    nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-    }
+/* classes do site*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
 
-    .logo a{
-        margin-left: 30%;
-        font-size: 30px;
-        font-weight: 800;
-        color: white;
-    }
+.logo a{
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+}
 
-    .ul{
-        display: flex;
-        align-items: center;
-    }
+.ul{
+    display: flex;
+    align-items: center;
+}
 
-    .ul li{
-        margin: 0 35px;
-        font-size: 18px;
-        font-weight:400;
-    }
+.ul li{
+    margin: 0 70px;
+    font-size: 18px;
+    font-weight:400;
+}
 
-    .ul li a{
-        color: white;
-    }
+.ul li a{
+    color: white;
+    white-space: nowrap;
+}
 
-    /*Background Home*/
+/* main */
 
-    .background{
-        background: #FFFFFF;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-text {
+    width: 40%;
+    color: #101E24; 
+}
+
+.main-text h1{
+    font-size: 5.5rem;
+}
+
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-img{
+    width: 55%;
+    align-items: flex-end;
+}
+
+.main-img img{
+    width: 100%;
+}
+
+/* menu icon */
+.menu-icon {
+    display: none;
+}
+/* resultados*/
+.resultados{
+background: var(--laranja);
+}
+.resultados .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.resultados .resultados-text{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    width: 50%;
+}
+.resultados .resultados-numeros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 5%;
+}
+.resultados .resultados-numeros p{
+    text-align: center;
+    margin: 0 30px;
+    font-size: 1.8rem;
+}
+
+.resultados .resultados-numeros p span{
+    font: 30px;
+    font-weight: 500;
+}
+/* section diferenciais */
+.diferenciais .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.diferenciais .card{
+   width: 30%;
+   cursor: pointer;
+   padding: 30px;
+   border-radius: 15px; 
+   transition: 0.3s;
+}
+.diferenciais .card:hover{
+    box-shadow: 0px 10px 67px 8px #969494;
+}
+.diferenciais .card img{
+    width: 60px;  
+}
+.diferenciais .card .titulo{
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+/* section casa*/
+.casa .container{
+    display: flex;
+    align-items: center;
+}
+.casa .casa-img{
+    width: 50%;
+}
+
+.casa .casa-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.casa .casa-text{
+    width: 50%;
+    padding: 5% 5%;
+}
+.casa .casa-text h2{
+    font-size: 2.5em;
+}
+
+.casa .casa-text p{
+    margin: 20px 0;
+    color: #969494;
+    font-size: 18px;
+}
+
+.casa .casa-text p b{
+    color: black;
+    font-size: 25px;
+}
+
+/* responsivo */
+@media(max-width: 1165px){
+    .menu-icon {
+        display: block;
         position: relative;
-        z-index: 1;
+        z-index: 2;
+        margin-right: 5%;
     }
-
-    .container{
+    .ul{
+        position: fixed;
+        background: var(--cinza);
+        top: 0;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center; 
     }
-
-    .main-text {
-        position: relative;
-        width: 40%;
-        color: #101E24;
-        font-size: 40px;    
-        margin-left: 10%;  
+    .ul li{
+        font-size: 20px;
+        margin: 20px 0px;
     }
-
-    .main-text div {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
+    .ul.ativo{
+        left: 0;
     }
-
-    .main-img {
-        height: 60%;
-        width: 60%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
+    main .container{
+        flex-direction: column;
     }
-
-    .main-img img {
-        height: 100%;
-        width: auto;
+    main .container .main-img{
+        width: 100%;
     }
-
-    .menu-icon {
-        display: none;
+    main .container .main-text{
+        width: 100%;
+        text-align: center;
     }
-
-    /*Responsivo*/
-
-    @media (max-width: 1024px){
-        .menu-icon{
-            display: block;
-            margin-right: 5%;
-            position: relative;
-            z-index: 4;
-        }
-        .ul{
-            position: fixed;
-            background: var(--cinza);
-            top: 0;
-            width: 100%;
-            height: 100%;
-            left: 100%;
-            z-index: 3;
-            transition: 0.3s;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .ul li{
-            font-size: 20px;
-            margin: 20px;
-            font-weight:400;
-        }
-        .ul.ativo{
-            left: 0;
-        }
-        main .container{
-            flex-direction: column;
-        }
-
-        .main-img{
-            width: 100%;
-        }
-        
-        .main-text{
-            display: flex;
-            word-wrap: break-word;
-            width: 80%;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .main-text div{
-            width: 100%;
-            justify-content: center;
-        }
+    main .container .main-text h1{
+        font-size: 4rem;
     }
+    main .container .main-text div{
+        justify-content: center;
+    }
+    .resultados .container{
+        flex-direction: column; 
+    }
+    .resultados .resultados-text,
+    .resultados .resultados-numeros{
+        width: 100%;
+        text-align: center;
+    }
+    .resultados-numeros{
+        margin-top: 30px;
+    }
+    .diferenciais .container{
+        flex-direction: column;
+    }
+    .diferenciais .card{
+        width: 100%;
+    }
+    .casa .container{
+        flex-direction: column-reverse;
+    }
+    .casa .casa-text, 
+    .casa .casa-img{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media(max-width:500px){
+    .resultados .resultados-numeros{
+        flex-direction: column;
+    }
+    .resultados .resultados-numeros p{
+        padding: 3%;
+    }
+}
