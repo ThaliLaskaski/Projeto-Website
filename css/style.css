@@ -8,7 +8,6 @@
     --cinza:#313131;
     --degrade-btn: linear-gradient(#FF5C1F, #ED4725);
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -16,14 +15,20 @@
     text-decoration: none;
     list-style: none;
 }
-
 body{
     font-family: "Fira Sans Condensed", sans-serif; 
 }
-
 .barra-cinza{
-    background: var(--cinza);
+    background: #ffecdc;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--laranja);   
+    border-radius: 5px;
+}
+/*end estilos gerais*/
 
 /* classes reutilizavéis */
 .container{
@@ -35,20 +40,20 @@ body{
 }
 section,
 footer{
-    padding: 2.7rem 0;
+    padding: 2.7rem 5%;
 }
-
 .btn-gradiente{
     padding: 10px 25px;
-    color: white;
+    color: black;
     border: none;
     cursor: pointer;
     background-image: var(--degrade-btn);
     border-radius: 20px;
     font-family: "Fira Sans Condensed", sans-serif;
-    font-size: 18px;
-    font-weight:400;
+    font-size: 20px;
+    font-weight:700;
 }
+/* end reutilizaveis */
 
 /* classes do site*/
 nav{
@@ -57,65 +62,66 @@ nav{
     align-items: center;
     padding: 20px 0;
 }
-
 .logo a{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 800;
-    color: white;
+    color: black;
 }
-
 .ul{
     display: flex;
     align-items: center;
 }
-
 .ul li{
     margin: 0 70px;
-    font-size: 18px;
-    font-weight:400;
+    font-size: 20px;
+    font-weight: 500;
 }
-
 .ul li a{
-    color: white;
+    color: black;
     white-space: nowrap;
 }
+.logo a:hover, 
+.ul li:hover, 
+.ul li a:hover {
+    color: var(--laranja);
+}
+/*end classes site*/
 
 /* main */
-
 main .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #ffecdc;
 }
-
 .main-text {
     width: 40%;
     color: #101E24; 
 }
-
 .main-text h1{
     font-size: 5.5rem;
 }
-
 .main-text div{
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
-
 .main-img{
     width: 55%;
     align-items: flex-end;
+    
 }
-
 .main-img img{
     width: 100%;
 }
+/* end main */
 
 /* menu icon */
 .menu-icon {
     display: none;
 }
+/*end menu icon*/
+
 /* resultados*/
 .resultados{
 background: var(--laranja);
@@ -143,34 +149,72 @@ background: var(--laranja);
     margin: 0 30px;
     font-size: 1.8rem;
 }
-
 .resultados .resultados-numeros p span{
     font: 30px;
     font-weight: 500;
 }
+/* end resultados */
+/*sobre*/
+.sobre .container{
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+ .sobre .sobre-img{
+    width: 50%;
+}
+ .sobre .sobre-img img{
+    width: 100%;
+    border-radius: 15px;
+}
+ .sobre .sobre-text{
+    width: 50%;
+    padding: 5% 5%;
+}
+ .sobre .sobre-text h3{
+    font-size: 2.5rem;
+}
+ .sobre .sobre-text h3 b{
+    color: var(--laranja);
+}
+ .sobre .sobre-text p{
+    margin: 20px auto;
+    color: #969494;
+    font-size: 18px;
+}
+ .sobre .sobre-text p b{
+    color: var(--laranja);
+}
+/* end sobre*/
 /* section diferenciais */
 .diferenciais .container{
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
 }
-.diferenciais .card{
+.diferenciais .cards {
    width: 30%;
    cursor: pointer;
    padding: 30px;
    border-radius: 15px; 
    transition: 0.3s;
+   margin:0 auto;
 }
-.diferenciais .card:hover{
+.diferenciais .cards:hover{
     box-shadow: 0px 10px 67px 8px #969494;
 }
-.diferenciais .card img{
-    width: 60px;  
+.diferenciais .cards img{
+    width: 100px;  
 }
-.diferenciais .card .titulo{
+.diferenciais .cards .titulo{
     margin: 13px 0;
     font-weight: 600;
 }
+.diferenciais .cards p{
+    color: #969494;
+    font-size: 18px;
+}
+/* end section diferenciais*/
 
 /* section casa*/
 .casa .container{
@@ -180,12 +224,10 @@ background: var(--laranja);
 .casa .casa-img{
     width: 50%;
 }
-
 .casa .casa-img img{
     width: 100%;
     border-radius: 10px;
 }
-
 .casa .casa-text{
     width: 50%;
     padding: 5% 5%;
@@ -193,18 +235,144 @@ background: var(--laranja);
 .casa .casa-text h2{
     font-size: 2.5em;
 }
-
 .casa .casa-text p{
-    margin: 20px 0;
+    margin: 20px auto;
     color: #969494;
     font-size: 18px;
 }
-
 .casa .casa-text p b{
     color: black;
     font-size: 25px;
 }
+/*end selction casa*/
 
+/* melhores lugares*/
+.melhores-lugares .azul{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--laranja);
+    margin-top: 5%;
+}
+.melhores-lugares h2{
+    font-size: 2.5rem;
+}
+.melhores-lugares .cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.melhores-lugares .cards .cards-item{
+    width: 30%;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0px 35px 97px 8px #969494;
+}
+.melhores-lugares .cards img{
+    width: 150px;
+}
+.melhores-lugares .cards .local-casa{
+    margin: 5px 0;
+    color: #969494;
+}
+.melhores-lugares .cards .nome-casa{
+    font-size: 30px;
+    font-weight: 500;
+}
+.melhores-lugares .cards .contato{
+    margin-bottom: 20px;
+    color: #706e6e;
+}
+.melhores-lugares .cards button{
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--laranja);
+    border: none;
+    border-radius: 05px;
+}
+/*end melhores lugares*/
+
+/* section newsletter*/
+.newsletter{
+    margin-top: 5%;
+    background-color: #313131;
+}
+.newsletter .box-newletter{
+    text-align: center;
+    padding: 100px;
+    background-image: url('../img/bk-newletter.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+  
+}
+.newsletter .box-newletter h2{
+    font-size: 3rem;
+}
+.newsletter .box-newletter p{
+    margin: 13px 0;
+}
+.newsletter .box-newletter input{
+    width: 35%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: #00000098;
+    background-color: #f5e1b8;
+}
+.newsletter .box-newletter button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: #313131;
+    cursor: pointer;
+}
+
+/* end newsletter */
+
+/* footer */
+footer{
+    background-color:  var(--laranja);
+}
+footer .container{
+    display: flex;
+    color: white;
+}
+footer .container ul{
+    width: 25%;
+    font-weight: 300;
+    font-size: 18px;
+}
+footer .container .titulo{
+    font-size: 24px;
+    margin: 0px 0px;
+}
+footer .container h3{
+    margin-bottom: 18px;
+    margin: 0px 80px;
+    font-weight: 600;
+    font-size: 20px;
+}
+footer .container .redes-sociais img{
+    width: 25px;
+    margin-right: 10px;
+}
+footer .container ul > p{
+    margin-top: 5%;
+    margin-bottom: 40px;
+}
+footer .container li{
+    margin: 10px 80px;
+}
+footer .container a{
+    color: white;
+}
+/*end footer*/
 /* responsivo */
 @media(max-width: 1165px){
     .menu-icon {
@@ -261,7 +429,7 @@ background: var(--laranja);
     .diferenciais .container{
         flex-direction: column;
     }
-    .diferenciais .card{
+    .diferenciais .cards{
         width: 100%;
     }
     .casa .container{
@@ -272,6 +440,46 @@ background: var(--laranja);
         width: 100%;
         text-align: center;
     }
+    .melhores-lugares .cards{
+        flex-direction: column;
+    }
+    .melhores-lugares .cards .cards-item{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .newsletter .box-newletter h2{
+        font-size: 2rem;
+    }
+    .newsletter .box-newletter input{
+        width: 90%;
+    }
+    .newsletter .box-newletter{
+        padding: 50px;
+    }
+    .newsletter .box-newletter buttom{
+        width: 50%;
+        margin-top: 20px;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container h3,
+    footer .container li{
+        margin: 3% 0; 
+    }
+    footer .container ul{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .sobre .container{
+        flex-direction: column;
+    }
+    .sobre .sobre-img,
+    .sobre .sobre-text{
+        width: 100%;
+        text-align: center;
+    }
+
 }
 @media(max-width:500px){
     .resultados .resultados-numeros{
