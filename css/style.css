@@ -1108,6 +1108,15 @@ footer .container a{
     .casa .container{
         margin-top: 22%;
     }
+    .modal .form h2{
+        font-size: 24px;
+    }
+    .modal .form p{
+        font-size: 15px;
+    }
+    .remember-me, .forget-password{
+        font-size: 15px;
+    }
 }
 @media(max-width:375px){
     .modal .form h2{
