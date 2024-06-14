@@ -4,9 +4,8 @@
 /*Estilos Gerais*/
 :root{
     --laranja: #FF5413;
+    --claro: #ffecdc;
     --azul-escuro: #101E24;
-    --cinza:#313131;
-    --degrade-btn: linear-gradient(#FF5C1F, #ED4725);
 }
 *{
     margin: 0;
@@ -17,16 +16,18 @@
 }
 body{
     font-family: "Fira Sans Condensed", sans-serif; 
+    background-color: var(--claro);
 }
-.barra-cinza{
-    background: #ffecdc;
-}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--laranja);   
     border-radius: 5px;
+}
+html{
+    scroll-behavior: smooth;
 }
 /*end estilos gerais*/
 
@@ -42,20 +43,28 @@ section,
 footer{
     padding: 2.7rem 5%;
 }
-.btn-gradiente{
+.button{
     padding: 10px 25px;
-    color: black;
     border: none;
     cursor: pointer;
-    background-image: var(--degrade-btn);
+    background-color: #cccbcb;
     border-radius: 20px;
     font-family: "Fira Sans Condensed", sans-serif;
     font-size: 20px;
-    font-weight:700;
+    font-weight:500;
+}
+.button:hover{
+    background-color: #ff5613;
 }
 /* end reutilizaveis */
 
 /* classes do site*/
+#header{
+    width: 100%;
+    position: fixed;
+    background-color: var(--claro);
+    z-index: 1000;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -92,11 +101,11 @@ main .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffecdc;
 }
 .main-text {
     width: 40%;
     color: #101E24; 
+    margin-left: 15%;
 }
 .main-text h1{
     font-size: 5.5rem;
@@ -104,21 +113,236 @@ main .container{
 .main-text div{
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .main-img{
-    width: 55%;
+    width: 50%;
     align-items: flex-end;
-    
+    margin-top: 5%;
 }
 .main-img img{
-    width: 100%;
+    width: 65%;
 }
 /* end main */
 
+/* 404 */
+.background-404 {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-image: url("../img/404.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.text-404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+    padding: 0 20px;
+    margin: 5%;
+    color: #101E24;
+}
+.text-404 h3 {
+    font-size: 5.5rem;
+    margin: 0;
+}
+.text-404 h2 {
+    font-size: 2rem;
+    margin: 20px 0 10px;
+}
+.text-404 p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.text-404 a {
+    color: var(--laranja);
+}
+/* end 404 */
+
+/* modal */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal.open{
+    display: flex;
+}
+.modal-content {
+    background-color: #fee9d6;
+    margin: 5% auto;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 80%;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+    overflow: hidden;
+}
+.modal .img-reserva,
+.modal .img-login,
+.modal .img-cadastro,
+.modal .img-inscricao{
+    width: 50%;
+    color: #101E24;
+    display: flex;
+}
+.modal .img-reserva img,
+.modal .img-login img,
+.modal .img-cadastro img,
+.modal .img-inscricao img
+{
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+.modal .form{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal .form h2 {
+    font-size: 3rem;
+}
+.modal-content p{
+    font-size: 18px;
+    margin: 3% auto;
+}
+.modal-content p .click{
+    color: black;
+}
+
+.modal-content p .click:hover{
+    color: var(--laranja);
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+.remember-me input[type="checkbox"] {
+    margin-right: 10px;
+}
+input[type="checkbox"] {
+    display: flex;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: #ccc;
+    border: 2px solid var(--laranja);
+    border-radius: 7px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked {
+    background-color: var(--laranja);
+    border: 2px solid var(--laranja);
+}
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.forget-password {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.forget-password:hover {
+    color: var(--laranja);
+}
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%; 
+    margin-top: 20px;
+}
+.close-btn{
+    position: absolute;
+    top: 11%;
+    right: 11%;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.close-btn img{
+    width: 30px;
+}
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 5%;
+}
+.modal input[type="email"],
+.modal input[type="password"],
+.modal input[type="tel"],
+.modal input[type="text"]
+{
+    width: 60%;
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: #00000098;
+}
+.modal .button-rs {
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #313131;
+    font-size: 15px;
+    border-radius: 20px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    outline: none;
+    width: 60%;
+    font-size: 20px;
+    font-weight:500;
+    color: white;
+    margin-top: 5%;
+}
+.modal .button-rs:hover {
+    background-color: #ff5613;
+}
+@keyframes openmodal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.modal.open .modal-content {
+    animation: openmodal 0.5s;
+}
+/* end modal */
 /* menu icon */
 .menu-icon {
     display: none;
+}
+.menu-icon img{
+    width: 30px;
 }
 /*end menu icon*/
 
@@ -155,42 +379,39 @@ background: var(--laranja);
 }
 /* end resultados */
 /*sobre*/
-.sobre .container{
+.sobre .container {
     display: flex;
-    align-items: center;
-    margin-top: 5%;
-}
- .sobre .sobre-img{
-    width: 50%;
-}
- .sobre .sobre-img img{
+    flex-direction: column;
+    align-items: center; 
     width: 100%;
-    border-radius: 15px;
+    max-width: 500px; 
+    margin-top: 10%;
+    margin-right: auto;
 }
- .sobre .sobre-text{
-    width: 50%;
-    padding: 5% 5%;
+.sobre .sobre-text {
+    text-align: center;
+    width: 100%;
+    font-size: 19px;
+}
+ .sobre .sobre-text h1{
+    font-size: 1.500rem;
+    line-height: 1.75rem;
+    color: var(--laranja);
 }
  .sobre .sobre-text h3{
-    font-size: 2.5rem;
+    font-size: 50px;
+    color: var(--azul-escuro)
 }
- .sobre .sobre-text h3 b{
-    color: var(--laranja);
+.sobre .sobre-text p{
+    margin: 5% auto;
+    font-weight: 400;
 }
- .sobre .sobre-text p{
-    margin: 20px auto;
-    color: #969494;
-    font-size: 18px;
-}
- .sobre .sobre-text p b{
-    color: var(--laranja);
-}
+
 /* end sobre*/
 /* section diferenciais */
 .diferenciais .container{
     display: flex;
     justify-content: space-between;
-    margin: 30px auto;
 }
 .diferenciais .cards {
    width: 30%;
@@ -209,19 +430,109 @@ background: var(--laranja);
 .diferenciais .cards .titulo{
     margin: 13px 0;
     font-weight: 600;
+    font-size: 20px;
 }
 .diferenciais .cards p{
-    color: #969494;
     font-size: 18px;
+    font-weight: 400;
 }
 /* end section diferenciais*/
-
+/* tipos casa */
+.tipos-casa .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+.tipos-casa .tipos-img{
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 1rem;
+}
+.tipos-casa .tipos-img img{
+    width: 60%;
+}
+.tipos-casa .tipos-text{
+    width: 50%;
+    padding: 0% 5%;
+    margin-bottom: 2rem;
+}
+.tipos-casa .tipos-text h3{
+    font-size: 50px;
+    color: var(--azul-escuro);
+}
+.tipos-casa .tipos-text p{
+    margin: 5% auto;
+    font-weight: 400;
+    font-size: 18px;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    flex-wrap: wrap;
+}
+.tipos-casa .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 250px;
+    height: 300px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 67px 8px #969494;
+    transition: 0.5s;
+}
+.tipos-casa .cards:hover{
+    height: 480px;
+}
+.cards .img-box{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0px;
+    transition: 0.5s;
+}
+.cards:hover .img-box{
+    top: -50px;
+    transform: scale(0.50);
+}
+.cards .img-box img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+.cards .content{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.cards .content h2{
+    font-size: 20px;
+}
+.cards:hover .content{
+    top: 130px;
+    height: 350px;
+    padding: 10% 30px;
+}
+/* end tipos casa */
 /* section casa*/
 .casa .container{
     display: flex;
     align-items: center;
 }
 .casa .casa-img{
+    margin-top: 15%;
     width: 50%;
 }
 .casa .casa-img img{
@@ -229,6 +540,7 @@ background: var(--laranja);
     border-radius: 10px;
 }
 .casa .casa-text{
+    margin-top: 15%;
     width: 50%;
     padding: 5% 5%;
 }
@@ -237,7 +549,6 @@ background: var(--laranja);
 }
 .casa .casa-text p{
     margin: 20px auto;
-    color: #969494;
     font-size: 18px;
 }
 .casa .casa-text p b{
@@ -273,7 +584,6 @@ background: var(--laranja);
 }
 .melhores-lugares .cards .local-casa{
     margin: 5px 0;
-    color: #969494;
 }
 .melhores-lugares .cards .nome-casa{
     font-size: 30px;
@@ -281,14 +591,19 @@ background: var(--laranja);
 }
 .melhores-lugares .cards .contato{
     margin-bottom: 20px;
-    color: #706e6e;
 }
 .melhores-lugares .cards button{
-    padding: 10px 20px;
-    color: white;
-    background-color: var(--laranja);
+    padding: 10px 25px;
+    background-color: #cccbcb;
     border: none;
-    border-radius: 05px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 16px;
+    font-weight:500;
+}
+.melhores-lugares .cards button:hover{
+    background-color: #ff5613; 
 }
 /*end melhores lugares*/
 
@@ -332,6 +647,9 @@ background: var(--laranja);
     background-color: #313131;
     cursor: pointer;
 }
+.newsletter .box-newletter button:hover{
+    background-color: #ff5613;
+}
 
 /* end newsletter */
 
@@ -361,6 +679,7 @@ footer .container h3{
 footer .container .redes-sociais img{
     width: 25px;
     margin-right: 10px;
+    cursor: pointer;
 }
 footer .container ul > p{
     margin-top: 5%;
@@ -368,12 +687,56 @@ footer .container ul > p{
 }
 footer .container li{
     margin: 10px 80px;
+    cursor: pointer;
 }
 footer .container a{
     color: white;
 }
 /*end footer*/
 /* responsivo */
+@media(max-width: 1650px){
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    #card-1, #card-2, #card-3 {
+        position: relative;
+        z-index: 1;
+    }
+    #card-4, #card-5 {
+        position: absolute;
+        top: 520px; 
+        z-index: 0;
+    }
+    #card-4 {
+        left: calc(50% - 310px);
+    }
+    #card-5 {
+        left: calc(50% + 10px);
+    }
+    .casa .container{
+        margin-top: 32%;
+    }
+}
+@media(max-width: 1600px){
+    .casa .container{
+        margin-top: 40%;
+    }
+}
+@media(max-width: 1500px){
+    .close-btn{
+        top: 10%;
+    }
+}
+@media(max-width: 1350px){
+    .close-btn{
+        top: 8%;
+    }
+    .casa .container{
+        margin-top: 45%;
+    }
+}
 @media(max-width: 1165px){
     .menu-icon {
         display: block;
@@ -383,13 +746,13 @@ footer .container a{
     }
     .ul{
         position: fixed;
-        background: var(--cinza);
+        background: var(--claro);
         top: 0;
         width: 100%;
         height: 100%;
         left: 100%;
         transition: 0.3s;
-        flex-direction: column;
+        flex-direction: column;                                         
         justify-content: center; 
     }
     .ul li{
@@ -403,11 +766,14 @@ footer .container a{
         flex-direction: column;
     }
     main .container .main-img{
-        width: 100%;
+        width: 60%;
+        margin-left: 25%;
     }
     main .container .main-text{
         width: 100%;
         text-align: center;
+        margin: auto auto;
+        margin-top: 10%;
     }
     main .container .main-text h1{
         font-size: 4rem;
@@ -439,6 +805,9 @@ footer .container a{
     .casa .casa-img{
         width: 100%;
         text-align: center;
+    }
+    .casa .casa-img{
+        margin-top: -2%;
     }
     .melhores-lugares .cards{
         flex-direction: column;
@@ -474,18 +843,280 @@ footer .container a{
     .sobre .container{
         flex-direction: column;
     }
-    .sobre .sobre-img,
     .sobre .sobre-text{
         width: 100%;
         text-align: center;
     }
-
+    .tipos-casa .container{
+        flex-direction: column;
+    }
+    .tipos-casa .tipos-text,
+    .tipos-casa .tipos-img{
+        width: 100%;
+        text-align: center;
+        margin-right: 5%;
+    }
+    .modal-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        height: 90%;
+        max-height: 90%;
+    }
+    .modal .img-reserva img,
+    .modal .img-login img,
+    .modal .img-cadastro img,
+    .modal .img-inscricao img
+    {
+        display: none;
+    }
+    .modal .img-reserva{
+        background-image: url("../img/reserva-respon.svg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50%;
+    }
+    .modal .img-login{
+        background-image: url("../img/login-respon.svg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50%;
+    }
+    .modal .img-cadastro{
+        background-image: url("../img/cadastro-respon.svg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50%;
+    }
+    .modal .img-inscricao{
+        background-image: url("../img/inscricao-respon.svg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50%;
+    }
+    .modal-content p{
+        margin: 0;
+    }
+    .modal .form .text{
+        text-align: center;
+        align-items: center;
+        margin-bottom: 25%;
+    }
+    .modal .form{
+        margin: 0% 25%;
+    }
+    .modal-content p {
+        margin: 0% auto;
+    }
+    .modal .img-reserva img {
+        border-radius: 20px 20px 0 0;
+    }
+    .form p{
+        margin-top: 2%;
+    }
+    .remember-me {
+        margin-top: -20px;
+    }
+    .forget-password {
+        margin-top: -20px; 
+    }
+    .modal .button-rs{
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .close-btn {
+        top: 8%;
+    }
+    .newsletter .button-rs{
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .text-404 a{
+        margin-left: 25%;
+    }
+    .close-btn {
+        top: 7%;
+    }
+   
 }
-@media(max-width:500px){
+@media(max-width:1135px){
+    .casa .container{
+        margin-top: 52%;
+    }
+}
+@media(max-width:1047px){
+    .background-404{
+        background-image: none;
+        flex-direction: column;
+    }
+    .container-404{
+        flex-direction: column;
+    }
+    .img-404{
+        background-image: url(../img/404-respon.svg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50%;
+    }
+    .text-404{
+        width: 100%;
+        text-align: center;
+        margin: 5% auto;
+        margin-top: 10%;
+        align-items: center;
+    }
+    .text-404 h3 {
+        font-size: 3.5rem;
+    }
+    .text-404 h2 {
+        font-size: 1.8rem;
+        margin: 20px 0 10px;
+    }
+    .text-404 p {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    .text-404 a {
+        margin-left: 0;
+    }
+    .close-btn {
+        top: 7%;
+    }
+}
+@media(max-width:963px){
+    #card-1, #card-2{
+        position: relative;
+        z-index: 1;
+    }
+    #card-3{
+        position: absolute;
+        top: 520px; 
+        z-index: 0;
+    }
+    #card-4, #card-5{
+        position: absolute;
+        top: 1040px; 
+        z-index: 0;
+    }
+    #card-4 {
+        left: calc(50% - 310px)
+    }
+    #card-5 {
+        left: calc(50% + 10px);
+    }
+    .casa .container{
+        margin-top: 120vh;
+    }
+}
+@media(max-width:770px){
     .resultados .resultados-numeros{
         flex-direction: column;
     }
     .resultados .resultados-numeros p{
         padding: 3%;
+    }
+    main .container .main-text{
+        width: 100%;
+        text-align: center;
+        margin: auto auto;
+        margin-top: 30%;
+    }
+    .modal .img-reserva img,
+    .modal .img-login img,
+    .modal .img-cadastro img,
+    .modal .img-inscricao img
+    {
+        display: flex;
+    }
+
+    .modal .img-reserva,
+    .modal .img-login,
+    .modal .img-inscricao{
+        width: 100%;
+        height: 40%;
+    }
+    .modal .img-cadastro{
+        height: 35%;
+    }
+    .modal input[type="email"],
+    .modal input[type="password"],
+    .modal input[type="tel"],
+    .modal input[type="text"]{
+        width: 100%;
+    }
+    .close-btn {
+        top: 6%;
+    }
+}
+@media(max-width:630px){
+    .close-btn {
+        top: 4%;
+    }
+    .modal .img-inscricao {
+        background-image: url("../img/inscricao.svg");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50%;
+    }
+    .modal .form{
+        width: 100%;
+        height: 50%;
+        margin-top: 5%;
+        margin-left: 0;
+        margin-bottom: 20%;
+    }
+    .modal .form .text h2 {
+        font-size: 1.5rem;
+    } 
+    .remember-me span{
+        margin-left: -40%;
+        white-space: nowrap;
+    }
+    .forget-password{
+        margin-left: -15%;
+        white-space: nowrap;
+    }
+    .modal p{
+        margin-top: 5%
+    }
+    .remember-me input[type="checkbox"] {
+        margin-left: -50%;
+        margin-right: 50%;
+    }
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    #card-3, #card-4, #card-5 {
+        position: relative;
+        top: 0px; 
+        z-index: 0;
+    }
+    #card-4 {
+        left: 0;
+    }
+    #card-5 {
+        left: 0;
+    }
+    .casa .container{
+        margin-top: 22%;
+    }
+}
+@media(max-width:375px){
+    .modal .form h2{
+        font-size: 24px;
+    }
+    .modal .form p{
+        font-size: 15px;
+    }
+    .remember-me, .forget-password{
+        font-size: 15px;
     }
 }

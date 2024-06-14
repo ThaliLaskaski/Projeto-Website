@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Projeto Website</title>
-</head>
-<body>
-    <div class="barra-cinza">
-        <!-- header -->
-        <header>
-            <!-- container -->
-            <div class="container">
-                <nav>
-                    <div class="logo">
-                        <a href="index.html"> NewWace</a>
-                    </div>
-                    <ul class="ul">
-                        <li> <a href="#">Home</a></li>
-                        <li> <a href="#">Sobre</a></li>
-                        <li> <a href="#">Tipos de casa</a></li>
-                        <li> <a href="#">Contato</a></li>
-                        <li> <a href="#"> <button class="btn-gradiente">Começar</button></a></li>
-                    </ul>
-                    <div class="menu-icon">
-                        <img src="img/menu.png" alt="ícone de menu">
-                    </div>
-                </nav>
-            </div>
-            <!-- end container-->
-        </header>
-        <!-- end header -->
-    </div>
-    <!-- main -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Projeto Website</title>
+    </head>
+    <body>
+        <div class="barra">
+            <!-- header -->
+            <header id="header">
+                <!-- container -->
+                <div class="container">
+                    <nav>
+                        <div class="logo">
+                            <a href="#home"> NewWace</a>
+                        </div>
+                        <ul class="ul">
+                            <li> <a href="#home">Home</a></li>
+                            <li> <a href="#sobre">Sobre</a></li>
+                            <li> <a href="#tipos-casa">Tipos de casa</a></li>
+                            <li> <a href="404.html">Contato</a></li>
+                            <li> <a href="#"> <button onclick="openModal" id="comecarBtn" class="button">Começar</button></a></li>
+                        </ul>
+                        <div class="menu-icon">
+                            <img src="img/menu.png" alt="ícone de menu">
+                        </div>
+                    </nav>
+                </div>
+                <!-- end container-->
+            </header>
+            <!-- end header -->
+        </div>
+        <!-- main -->
         <main>
             <!-- container -->
-            <div class="container">
+            <div class="container" id="home">
                 <!-- main text-->
                 <div class="main-text">
                     <h1 class="h1welcome">O Lar da felicidade</h1>
                     <h2>Moderno & Clássico</h2>
                     <div>
-                        <button class="btn-gradiente">Reservar agora</button>
+                        <button onclick="openModal()" id="reservarAgoraBtn" class="button">Reservar agora</button>
                         <img src="img/verificado.png" alt="ícone de verificado">
                     </div>
                 </div>
                 <!-- end main text -->
                 <!-- main img -->
                 <div class="main-img">
-                    <img src="img/background (1).png" alt="bonecos de uma mãe, um pai e suas duas filhas felizes em frente a uma casa laranja">
+                    <img src="img/background.png" alt="bonecos de uma mãe, um pai e suas duas filhas felizes em frente a uma casa laranja">
                 </div>
                 <!-- end main img-->
             </div> 
@@ -85,24 +85,19 @@
         </section>
         <!-- end resultados -->
         <!-- section sobre -->
-         <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="container">
                 <!-- sobre-text -->
                 <div class="sobre-text">
-                    <h3>A <b>NewWace</b></h3>
+                    <h1> Lares Inspiradores </h1>
+                    <h3> Moldando Espaços, Criando Sonhos </h3>
                     <p>
-                        Com mais de 30 anos de atuação, a NewWace é a sua nova referência em excelência imobiliária. Aqui, oferecemos mais do que casas; construímos sonhos. Com a expertise adquirida ao longo de toda nossa existência, buscamos não apenas incorporar condomínios de casas prontas, mas também criar lares onde memórias preciosas são feitas. Já são mais de 60 mil projetos concluídos, com o objetivo de aumentar a qualidade de vida das famílias, atendendo ao máximo todos os seus anseios na busca por um lar. Seja bem-vindo à NewWace, onde a felicidade e a excelência se encontram. Junte-se a nós nessa jornada de transformar espaços em lugares que você chama de lar.<br>
-                        Bem-vindo à sua <b>nova casa</b>, bem-vindo à <b>NewWace.</b>
+                        Na NewWace, criamos experiências transformadoras, moldando lares onde cada detalhe reflete a personalidade e os sonhos dos clientes, com excelência e inovação.
                     </p>
                 </div>
                 <!-- end sobre text -->
-                <!-- sobre img -->
-                <div class="sobre-img">
-                    <img src="img/casa-sobre.svg" alt="imagem de casas em construção">
-                </div>
-                <!-- end sobre img -->
             </div>
-         </section>
+        </section>
         <!-- end section sobre-->
         <!-- diferenciais -->
         <section class="diferenciais">
@@ -111,36 +106,112 @@
                     <img src="img/medalha.svg" alt="ícone de medalha">
                     <h3 class="titulo">Empresa Profissional</h3>
                     <p>
-                         Oferecemos serviços completos, da escolha do terreno à entrega das chaves. Nossa equipe experiente garante excelência em cada etapa, atendendo às expectativas dos clientes. Confie na NewWace para construir seu futuro com segurança e qualidade.
+                        Oferecemos serviços completos, da escolha do terreno até a entrega das chaves. Confie na nossa equipe para garantir excelência em todas as etapas, atendendo às suas expectativas com segurança e qualidade.
                     </p>
                 </div>
                 <div class="cards">
                     <img src="img/24h.svg" alt="ícone de relógio 24 horas">
                     <h3 class="titulo">Consultoria 24 horas</h3>
                     <p>
-                        Oferecemos atendimento 24 horas para atender todas as suas necessidades. Estamos sempre disponíveis para fornecer suporte e orientação especializada, garantindo que você tenha acesso às melhores oportunidades do mercado a qualquer hora do dia ou da noite.
+                        Oferecemos atendimento 24 horas para suas necessidades, garantindo suporte especializado e acesso às melhores oportunidades do mercado a qualquer momento.
                     </p>
                 </div>
                 <div class="cards">
                     <img src="img/caixa.svg" alt="ícone de caixa">
                     <h3 class="titulo">Servindo em vários países</h3>
                     <p>
-                        Atuamos em vários países, oferecendo serviços de excelência no mercado imobiliário global. Com uma rede internacional de profissionais experientes, garantimos suporte especializado e oportunidades únicas para nossos clientes, onde quer que estejam.
+                        Atuamos globalmente no mercado imobiliário, oferecendo serviços de excelência e suporte especializado para clientes em todo o mundo.
                     </p>
                 </div>
             </div>
         </section>
         <!-- end diferenciais -->
         <!-- tipos casas -->
-        <section class="tipos-casa">
+        <section class="tipos-casa" id="tipos-casa">
             <div class="container">
                 <!-- tipos-img-->
                 <div class="tipos-img">
-                    <img src="img/tipos-casa.png" alt="personagem mulher com um computador vendo casas">
+                    <img src="img/tipos-casa.svg" alt="personagem mulher com um computador vendo casas">
                 </div>
                 <!-- end tipos-img-->
-            </div>
-
+                <!-- tipos-text -->
+                <div class="tipos-text">
+                    <h3>Tipos de casa</h3>
+                    <p>
+                        Existem diferentes tipos de casas: residenciais, comerciais, rurais, de alto padrão e na planta. Cada uma atende a necessidades específicas e oferece características únicas.
+                    </p>
+                </div>
+                <!-- end tipos-text -->
+                    <!-- cards container-->
+                    <div class="cards-container">
+                        <!-- cards item 1-->
+                        <div class="cards" id="card-1">
+                            <div class="img-box">
+                                <img src="img/residencial.png" alt="ícone de uma pequena casa residencial">
+                            </div>
+                            <div class="content">
+                                <h2>Imóveis residenciais</h2>
+                                <p>
+                                    Imóveis residenciais são construções destinadas à moradia de uma ou mais pessoas. Eles podem estar localizados em áreas urbanas ou rurais e devem possuir uma estrutura adequada para atender às necessidades básicas dos moradores, como quartos, cozinha, banheiro e sala de estar.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end card item 1 -->
+                        <!-- card item 2 -->
+                        <div class="cards" id="card-2">
+                            <div class="img-box">
+                                <img src="img/comercial.png" alt="ícone de um prédio comercial">
+                            </div>
+                            <div class="content">
+                                <h2>Imóveis comerciais</h2>
+                                    <p>
+                                        Imóveis comerciais são propriedades projetadas para abrigar atividades empresariais. Essas construções oferecem a infraestrutura necessária para negócios, incluindo salas, escritórios e depósitos. Investir em imóveis comerciais é uma excelente maneira de aplicar seu dinheiro, garantindo um retorno financeiro sólido e constante.
+                                    </p>
+                            </div>
+                        </div>
+                        <!-- end card item 2-->
+                        <!-- card item 3 -->
+                        <div class="cards" id="card-3">
+                            <div class="img-box">
+                                <img src="img/rural.png" alt="ícone de uma pequena casa rural">
+                            </div>
+                            <div class="content">
+                                <h2>Imóveis rurais</h2>
+                                <p>
+                                    Imóveis rurais são propriedades voltadas para atividades agrícolas e pecuárias. Esses terrenos são ideais para agronegócios, cultivo, criação de animais e outras práticas ligadas ao campo. Investir em imóveis rurais é uma excelente opção para quem deseja atuar no setor agropecuário.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end card item 3-->
+                        <!-- card item 4 -->
+                        <div class="cards" id="card-4">
+                            <div class="img-box">
+                                <img src="img/alto-padrao.png" alt="ícone de uma casa grande de alto padrão">
+                            </div>
+                            <div class="content">
+                                <h2>Imóveis de alto padrão</h2>
+                                <p>
+                                    Imóveis de alto padrão oferecem uma experiência única ao morador, proporcionando conforto, facilidade e qualidade de vida. Caracterizam-se pela alta qualidade dos materiais utilizados na construção e pela personalização dos projetos, garantindo exclusividade e sofisticação.
+                                    </p>
+                            </div>
+                        </div>
+                        <!-- end card item 4-->
+                        <!-- card item 5 -->
+                        <div class="cards" id="card-5">
+                            <div class="img-box">
+                                <img src="img/planta.png" alt="ícone de uma lupa procurando casas">
+                            </div>
+                            <div class="content">
+                                <h2>Imóveis na planta</h2>
+                                <p>
+                                    Imóveis na planta são aqueles que podem ser negociados durante a fase de projeto ou no início das obras. A compra é facilitada pelas condições de pagamento, permitindo ao comprador parcelar diretamente com a construtora e, se necessário, contratar o financiamento apenas após a entrega.
+                                    </p>
+                            </div>
+                        </div>
+                        <!-- end card item 5-->
+                    </div>
+                    <!-- end card container-->
+            </div>    
         </section>
         <!-- end tipos casa-->
         <!-- section casa -->
@@ -163,8 +234,8 @@
             </div>
         </section>
         <!-- end section casa -->
-         <!-- melhores lugares -->
-         <section>
+        <!-- melhores lugares -->
+        <section>
             <div class="melhores-lugares">
                 <div class="container">
                     <p class="azul">Escolha o seu melhor</p>
@@ -177,50 +248,50 @@
                             <p class="nome-casa">beHome</p>
                             <p class="contato"> 1234 567 8900 <br> agency@gmail.com 
                             </p>
-                            <button> 3 propriedades </button>
+                            <button onclick="window.location.href='404.html'">3 propriedades</button>
                         </div>
                         <!-- end card item 1-->
-                         <!-- card item 2-->
+                        <!-- card item 2-->
                         <div class="cards-item">
                             <img src="img/casa2.png" alt="icone casa 1">
                             <p class="local-casa"> Los Angeles, USA</p>
                             <p class="nome-casa">beHome</p>
                             <p class="contato"> 1234 567 8900 <br> agency@gmail.com 
                             </p>
-                            <button> 3 propriedades </button>
+                            <button onclick="window.location.href='404.html'">3 propriedades</button>
                         </div>
                         <!-- end card item 2-->
-                         <!-- card item 3-->
+                        <!-- card item 3-->
                         <div class="cards-item">
                             <img src="img/casa3.png" alt="icone casa 1">
                             <p class="local-casa"> Los Angeles, USA</p>
                             <p class="nome-casa">beHome</p>
                             <p class="contato"> 1234 567 8900 <br> agency@gmail.com 
                             </p>
-                            <button> 3 propriedades </button>
+                            <button onclick="window.location.href='404.html'">3 propriedades</button>
                         </div>
                         <!-- end card item 3-->
                     </div>
                 </div>
             </div>
-         </section>
-         <!-- end melhores lugares-->
-          <!-- newsletter -->
-           <section class="newsletter">
+        </section>
+        <!-- end melhores lugares-->
+        <!-- newsletter -->
+        <section class="newsletter">
             <div class="container">
                 <div class="box-newletter">
-                <h2>Cadastre-se para receber nossa newsletter</h2>
-                <p>Inscreva-se para receber conteúdos, novidades e dicas importantes.</p>
-                <form>
-                    <input type="email" placeholder="Digite o seu email">
-                    <button>Inscreva-se</button>
-                </form>
+                    <h2>Cadastre-se para receber nossa newsletter</h2>
+                    <p>Inscreva-se para receber conteúdos, novidades e dicas importantes.</p>
+                    <form>
+                        <input type="email" placeholder="Digite o seu email">
+                        <button class="button-rs">Inscreva-se</button>
+                    </form>
                 </div>
             </div>
-           </section>
-          <!-- end newsletter-->
-           <!-- footer -->
-           <footer>
+        </section>
+        <!-- end newsletter-->
+        <!-- footer -->
+        <footer>
             <div class="container">
                 <ul>
                     <h3 class="titulo">NewWace</h3>
@@ -235,20 +306,20 @@
                     </div>
                 </ul>
                 <ul>
-                  <h3>Link</h3>  
-                  <li> <a href="#">Home</a></li>
-                  <li> <a href="#">Preço</a></li>
-                  <li> <a href="#">Baixar</a></li>
-                  <li> <a href="#"></a>Sobre</li>
-                  <li> <a href="#"></a>Serviços</li>
+                    <h3>Link</h3>  
+                    <li> <a href="#home">Home</a></li>
+                    <li> <a href="404.html">Preço</a></li>
+                    <li> <a href="404.html">Baixar</a></li>
+                    <li> <a href="#">Sobre</a></li>
+                    <li> <a href="404.html">Serviços</a></li>
                 </ul>
                 <ul>
                     <h3>Suporte</h3>
-                    <li> <a href="#">FAQ</a></li>
-                    <li> <a href="#">Como Funciona</a></li>
-                    <li> <a href="#">Características</a></li>
-                    <li> <a href="#"></a>Contato</li>
-                    <li> <a href="#"></a>Comunicado</li>
+                    <li> <a href="404.html">FAQ</a></li>
+                    <li> <a href="404.html">Como Funciona</a></li>
+                    <li> <a href="404.html">Características</a></li>
+                    <li> <a href="404.html">Contato</a></li>
+                    <li> <a href="404.html">Comunicado</a></li>
                 </ul>
                 <ul>
                     <h3>Nos contate</h3>
@@ -260,11 +331,115 @@
                     </li>
                     <li>
                         <p>Brasil</p>
-                    </li>
-                </ul>
+                    </ul>
+                </div>
+        </footer>
+        <!-- end footer -->
+        <!-- Modal Reserva -->
+        <div id="reservaModal" class="modal">
+            <div class="modal-content">
+                <div class="img-reserva">
+                    <img src="img/reserva.svg" alt="personagem de uma mulher fazendo contato com um cliente">
+                </div>
+                <div class="form">
+                    <button class="close-btn" id="close-btn"><img src="img/close.png" alt="ícone de fechar"></button>
+                    <h2 class="titulo">Faça sua Reserva </h2>
+                    <p>Insira seu email e número de celular, e um dos nossos especialistas entrará em contato! </p>
+                    <form id="reservaForm">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Número">
+                        <button class="button-rs" type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
-           </footer>
-           <!-- end footer -->
-    <script src="js/main.js"></script>   
-</body>
+        </div>
+        <!-- end modal reserva -->
+        <!-- Modal Inscrição Reserva -->
+        <div id="inscReservaModal" class="modal">
+            <div class="modal-content">
+                <div class="img-inscricao">
+                    <img src="img/inscricao.svg" alt="personagem de uma mulher recebendo emails">
+                </div>
+                <div class="form">
+                    <button class="close-btn" id="close-btn"><img src="img/close.png" alt="ícone de fechar"></button>
+                    <div class="text">
+                        <h2>Inscrição confirmada!</h2>
+                        <p>
+                            Parabéns! Sua inscrição foi confirmada. <br>
+                            Em breve, um dos nossos especialistas entrará em contato com você.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal Inscrição -->
+        <!-- end modal inscricao reserva -->
+        <!-- Modal Login -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <div class="img-login">
+                    <img src="img/login.svg" alt="personagem mulher fazendo login">
+                </div>
+                <div class="form">
+                    <button class="close-btn" id="close-btn"><img src="img/close.png" alt="ícone de fechar"></button>
+                        <h2 class="titulo">Login</h2>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Digite o seu email" required>
+                        <input type="password" id="loginPassword" placeholder="Digite sua senha" required>
+                        <div class="form-footer">
+                            <label class="remember-me">
+                                <input type="checkbox" id="rememberMe">
+                                <span>Lembrar de mim</span>
+                            </label>
+                            <a href="404.html" class="forget-password">Esqueceu a senha?</a>
+                        </div>
+                        <button class="button-rs" type="submit">Enviar</button>
+                    </form>                                     
+                    <p>Não tem cadastro? <a href="#" id="cadastroLink" class="click">Clique aqui</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- end modal login -->
+        <!-- Modal Cadastro -->
+        <div id="cadastroModal" class="modal">
+            <div class="modal-content">
+                <div class="img-cadastro">
+                    <img src="img/cadastro.svg" alt="personagem mulher fazendo seu cadastro">
+                </div>
+                <div class="form">  
+                    <button class="close-btn" id="close-btn"><img src="img/close.png" alt="ícone de fechar"></button>
+                    <h2 class="titulo">Cadastro</h2>
+                    <form id="cadastroForm">
+                        <input type="text" placeholder="Digite o seu nome">
+                        <input type="email" placeholder="Digite o seu email">
+                        <input type="password" placeholder="Crie uma senha">
+                        <input type="password" placeholder="Confirme sua senha">
+                        <button class="button-rs" type="submit">Cadastrar</button>
+                    </form>                
+                </div>
+            </div>
+        </div>
+        <!-- end modal cadastro -->
+        <!-- Modal Inscrição -->
+        <div id="inscricaoModal" class="modal">
+            <div class="modal-content">
+                <div class="img-inscricao">
+                    <img src="img/inscricao.svg" alt="personagem de uma mulher recebendo emails">
+                </div>
+                <div class="form">
+                    <button class="close-btn" id="close-btn"><img src="img/close.png" alt="ícone de fechar"></button>
+                    <div class="text">
+                        <h2>Inscrição confirmada!</h2>
+                        <p>
+                            Parabéns! Você está agora oficialmente inscrito em nossa newsletter.<br>
+                            Fique atento à sua caixa de entrada para receber as últimas notícias, atualizações exclusivas e ofertas especiais diretamente em seu email.<br>
+                            <b> Obrigado por se juntar à nossa comunidade! </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal Inscrição -->
+        <script src="js/main.js"></script>   
+    </body>
 </html>
