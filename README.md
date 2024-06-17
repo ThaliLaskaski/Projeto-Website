@@ -11,19 +11,19 @@
 
   <h2>Interface da Página Inicial Desktop</h2>
   <p>Abaixo está a imagem representando a interface da página inicial do projeto em dispositivos desktop:</p>
-  <img src="../Projeto Website/img/interface.png" alt="Interface Página Inicial" width="100%">
+  <img src="img/interface.png" alt="Interface Página Inicial" width="100%">
 
   <h2>Interface da Página Inicial Mobile</h2>
   <p>Abaixo está a imagem representando a interface da página inicial do projeto em dispositivos mobile:</p>
-  <img src="../Projeto Website/img/interface mobile.png" width="50%"> 
+  <img src="img/interface-mobile.png" width="50%">
 
   <h2>Interface da Página de Login Desktop</h2>
   <p>Abaixo está a imagem representando a interface da página de login do projeto em dispositivos desktop:</p>
-  <img src="../Projeto Website/img/interface-login.png" alt="Interface Página Inicial" width="100%">
+  <img src="img/interface-login.png" alt="Interface Página Inicial" width="100%">
 
   <h2>Interface da Página de Login Mobile</h2>
-  <p>Abaixo está a imagem representando a interface da página inicial do projeto em dispositivos mobile:</p>
-  <img src="../Projeto Website/img/interface-login mobile.png" width="50%"> 
+  <p>Abaixo está a imagem representando a interface da página de login do projeto em dispositivos mobile:</p>
+  <img src="img/interface-login-mobile.png" width="50%">
 
   <h2>Como Utilizar:</h2>
   <p>Este projeto consiste em um site completo para uma construtora de imóveis, contendo diversos conteúdos como menu, login, cadastro, reserva e inscrição para newsletter. Convido você a acessá-lo para explorar tudo o que desenvolvi para aprimorar meu aprendizado.
